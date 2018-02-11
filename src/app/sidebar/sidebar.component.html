@@ -1,0 +1,5 @@
+<ul class="nav flex-column border">
+  <li class="nav-item" *ngFor="let p of heros; let index = index">
+    <a class="nav-link" [routerLink]="['/heros', index+1]">{{p.name}}</a>
+  </li>
+</ul>

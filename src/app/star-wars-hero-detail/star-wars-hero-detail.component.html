@@ -1,0 +1,19 @@
+<ng-container *ngIf="hero">
+    <h2>{{hero?.name}} Details</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>name</th>
+          <th>Height</th>
+          <th>Mass</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{hero?.name}}</td>
+          <td>{{hero?.height}}</td>
+          <td>{{hero?.mass}}</td>
+        </tr>
+      </tbody>
+    </table>
+</ng-container>
