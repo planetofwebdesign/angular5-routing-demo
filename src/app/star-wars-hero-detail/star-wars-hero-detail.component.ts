@@ -16,18 +16,18 @@ export class StarWarsHeroDetailComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private starWarsHeroService: StarWarsHerosService
+    // private starWarsHeroService: StarWarsHerosService
   ) { }
 
   ngOnInit() {
 
-    this.activatedRoute.paramMap.pipe(
-      mergeMap((params: ParamMap) => this.starWarsHeroService.getHero(params.get('id')))
-    ).subscribe(hero => this.hero = hero);
+    // this.activatedRoute.paramMap.pipe(
+    //   mergeMap((params: ParamMap) => this.starWarsHeroService.getHero(params.get('id')))
+    // ).subscribe(hero => this.hero = hero);
 
-    // this.activatedRoute.data.pipe(
-    //   pluck('hero')
-    // ).subscribe((hero: any) => this.hero = hero);
+    this.activatedRoute.data.pipe(
+      pluck('hero')
+    ).subscribe((hero: any) => this.hero = hero);
 
     // const self = this;
     // const id = this.activatedRoute.snapshot.paramMap.get('id');

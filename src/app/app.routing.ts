@@ -13,14 +13,14 @@ const routes: Routes = [
         path: '',
         component: StartWarsHeroesComponent,
         resolve: {
-         // 'heros': StartWarsHerosResolverService
+         'heros': StartWarsHerosResolverService
         },
         children: [
           {
             path: ':id',
             component: StarWarsHeroDetailComponent,
             resolve: {
-            //  'hero': StartWarsHerosDetailsResolverService
+             'hero': StartWarsHerosDetailsResolverService
             }
           }
         ]

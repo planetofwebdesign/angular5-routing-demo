@@ -17,11 +17,11 @@ export class StartWarsHeroesComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // this.activatedRoute.data.pipe(
-    //   pluck('heros')
-    // ).subscribe((heros: any[]) => this.heros = heros);
+    this.activatedRoute.data.pipe(
+      pluck('heros')
+    ).subscribe((heros: any[]) => this.heros = heros);
 
-     this.starWarsHerosService.getHeros().subscribe((heros: any[]) => this.heros = heros);
+    //  this.starWarsHerosService.getHeros().subscribe((heros: any[]) => this.heros = heros);
   }
 
 }
